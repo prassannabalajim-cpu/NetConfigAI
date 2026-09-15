@@ -77,33 +77,4 @@ http://localhost:8000/auth/google/callback
 | Manager | Review, approve, reject, and manage submitted changes |
 | Admin | Full administrative access |
 
-## Verification
-
-Frontend build:
-
-```bash
-cd frontend
-npm install
-npm run build
-```
-
-Backend syntax check:
-
-```bash
-cd backend
-python -m compileall app
-```
-
-Backend tests, when Docker is running:
-
-```bash
-docker compose exec backend pytest tests -q
-```
-
-## Security Notes
-
-- Do not commit `.env`.
-- Keep Google OAuth secrets and Gemini API keys outside source control.
-- Ollama is the default provider for privacy-friendly local analysis.
-- Gemini is optional and should be enabled only when cloud AI processing is acceptable.
 
